@@ -9,10 +9,8 @@ phases:
       - chmod +x ./kubectl ./aws-iam-authenticator
       - export PATH=$PWD/:$PATH
       - apt-mark hold java-1.8.0-amazon-corretto-jdk
-      - sudo rm /var/lib/apt/lists/* -vf 
       - sudo apt-get update
-      - apt-get update
-      - apt-get -y install jq python3-pip python3-dev
+      - sudo apt-get -y install jq python3-pip python3-dev
       - pip3 install --upgrade awscli
   pre_build:
       commands:
