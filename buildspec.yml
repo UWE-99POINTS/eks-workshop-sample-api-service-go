@@ -8,6 +8,7 @@ phases:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - chmod +x ./kubectl ./aws-iam-authenticator
       - export PATH=$PWD/:$PATH
+      - apt-mark hold java-1.8.0-amazon-corretto-jdk
       - apt-get update 
       - apt-get -y install -f
       - apt-get -y install jq python3-pip python3-dev
